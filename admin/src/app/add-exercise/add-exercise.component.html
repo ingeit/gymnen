@@ -1,0 +1,44 @@
+<h2>💪 Add Exercise !</h2>
+<div nz-row>
+
+  <div nz-col nzSpan="12">
+    <scrolling-list></scrolling-list>
+  </div>
+
+  <div nz-col nzSpan="12">
+    <div nz-row>
+      <div nz-col>
+        <nz-card>
+          <form nz-form>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="isHorizontal? 4:null">Name</nz-form-label>
+              <nz-form-control [nzSpan]="isHorizontal? 14:null">
+                <input nz-input placeholder="Name">
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="isHorizontal? 4:null">Description</nz-form-label>
+              <nz-form-control [nzSpan]="isHorizontal? 14:null">
+                <input nz-input placeholder="Description">
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+          <button nz-button nzType="primary" (click)="ricky()">
+            Save
+          </button>
+          <input type="file" #fileLoader style="display: none;" (change)="subirImagen($event)">
+          <button nz-button nzType="dashed" (click)="addImage()" >
+            Add Image<i class="anticon anticon-plus-circle-o"></i>
+          </button>
+        </nz-card>
+      </div>
+    </div>
+    <div nz-row *ngIf="image" >
+      <div nz-col>
+        <!-- <input type="file" #fileInput style="display:none"> -->
+        <img [src]="image" alt="alla" style="width: 240px;">
+      </div>
+    </div>
+
+  </div>
+</div>

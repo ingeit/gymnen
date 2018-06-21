@@ -11,6 +11,8 @@ import en from '@angular/common/locales/en';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddExerciseComponent } from './add-exercise/add-exercise.component';
+import { ScrollingListComponent } from './scrolling-list/scrolling-list.component';
 
 registerLocaleData(en);
 
@@ -18,7 +20,9 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     SideMenuComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddExerciseComponent,
+    ScrollingListComponent
   ],
   imports: [
     BrowserModule,
