@@ -13,6 +13,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
 import { ScrollingListComponent } from './scrolling-list/scrolling-list.component';
+import { SiderLayoutComponent } from './sider-layout/sider-layout.component';
 
 registerLocaleData(en);
 
@@ -22,7 +23,8 @@ registerLocaleData(en);
     SideMenuComponent,
     DashboardComponent,
     AddExerciseComponent,
-    ScrollingListComponent
+    ScrollingListComponent,
+    SiderLayoutComponent
   ],
   imports: [
     BrowserModule,
