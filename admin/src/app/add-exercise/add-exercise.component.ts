@@ -20,8 +20,8 @@ export class AddExerciseComponent implements OnInit {
 
   addImage() {
     this.imgld.nativeElement.click();
-
   }
+
   subirImagen(fileInput) {
     console.log(fileInput);
     if (fileInput.target.files && fileInput.target.files[0]) {

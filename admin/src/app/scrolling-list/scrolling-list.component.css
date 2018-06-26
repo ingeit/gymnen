@@ -10,3 +10,7 @@
     bottom: -40px;
     left: 50%;
   }
+
+  * {
+    height: 100% !important;
+  }

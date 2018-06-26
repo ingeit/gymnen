@@ -1,7 +1,6 @@
-<h2>💪 Add Exercise !</h2>
 <div nz-row>
-
-  <div nz-col nzSpan="12">
+  
+  <div nz-col nzSpan="12" style="height: 100% !important; padding-right: 10px">
     <scrolling-list></scrolling-list>
   </div>
 
@@ -11,29 +10,29 @@
         <nz-card>
           <form nz-form>
             <nz-form-item>
-              <nz-form-label [nzSpan]="isHorizontal? 4:null">Name</nz-form-label>
+              <nz-form-label [nzSpan]="isHorizontal? 4:null">Nombre</nz-form-label>
               <nz-form-control [nzSpan]="isHorizontal? 14:null">
-                <input nz-input placeholder="Name">
+                <input nz-input placeholder="Nombre">
               </nz-form-control>
             </nz-form-item>
             <nz-form-item>
-              <nz-form-label [nzSpan]="isHorizontal? 4:null">Description</nz-form-label>
+              <nz-form-label [nzSpan]="isHorizontal? 4:null">Descripcion</nz-form-label>
               <nz-form-control [nzSpan]="isHorizontal? 14:null">
-                <input nz-input placeholder="Description">
+                <input nz-input placeholder="Descripcion">
               </nz-form-control>
             </nz-form-item>
           </form>
           <button nz-button nzType="primary" (click)="ricky()">
-            Save
+            Guardar
           </button>
           <input type="file" #fileLoader style="display: none;" (change)="subirImagen($event)">
           <button nz-button nzType="dashed" (click)="addImage()" >
-            Add Image<i class="anticon anticon-plus-circle-o"></i>
+            Agregar imagen<i class="anticon anticon-plus-circle-o"></i>
           </button>
         </nz-card>
       </div>
     </div>
-    <div nz-row *ngIf="image" >
+    <div nz-row *ngIf="image">
       <div nz-col>
         <!-- <input type="file" #fileInput style="display:none"> -->
         <img [src]="image" alt="alla" style="width: 240px;">

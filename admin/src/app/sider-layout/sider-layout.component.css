@@ -26,3 +26,19 @@
   *display: inline !important;
   overflow: hidden;
 }
+
+/* nz-layout {
+  height: 100% !important;
+} */
+
+#routeroutlet {
+  height: 100% !important;
+}
+
+nz-content {
+  height: 100% !important;
+}
+
+router-outlet {
+  height: 100% !important;
+}

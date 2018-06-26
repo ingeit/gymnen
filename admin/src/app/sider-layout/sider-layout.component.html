@@ -3,32 +3,21 @@
     <div class="logo">
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu>
-        <span title>
-          <i class="anticon anticon-user"></i>
-          <span class="nav-text">User</span>
-        </span>
-        <ul>
-          <li nz-menu-item>Tom</li>
-          <li nz-menu-item>Bill</li>
-          <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu>
-        <span title>
-          <i class="anticon anticon-team"></i>
-          <span class="nav-text">Team</span>
-        </span>
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
+      <li nz-menu-item>
+        <a routerLink="/dashboard">
+          <span>
+            <i class="anticon anticon-home"></i>
+            <span class="nav-text">Inicio</span>
+          </span>
+        </a>
       </li>
       <li nz-menu-item>
-        <span>
-          <i class="anticon anticon-file"></i>
-          <span class="nav-text">File</span>
-        </span>
+        <a routerLink="/addExercise">
+          <span>
+            <i class="anticon anticon-plus"></i>
+            <span class="nav-text">Crear ejercicio</span>
+          </span>
+        </a>
       </li>
     </ul>
   </nz-sider>
@@ -42,13 +31,13 @@
         <li nz-menu-item>nav 3</li>
       </ul>
     </nz-header>
-    <nz-content style="margin:0 16px;" >
+    <nz-content style="margin:0 16px;">
       <nz-breadcrumb style="margin:16px 0;">
         <nz-breadcrumb-item>User</nz-breadcrumb-item>
         <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
       </nz-breadcrumb>
-      <div style="padding:24px; background: #fff; min-height: 360px;">
-        Macri is a cat.
+      <div id="routeroutlet" style="padding:24px; background: #fff;">
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
     <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
