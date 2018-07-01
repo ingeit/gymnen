@@ -1,0 +1,11 @@
+#menuicon{
+    display: inline-block !important;
+    *display: inline !important;
+    overflow: hidden;
+  }
+  #navlist{
+    display: inline-block !important;
+    *display: inline !important;
+    overflow: hidden;
+  }
+  

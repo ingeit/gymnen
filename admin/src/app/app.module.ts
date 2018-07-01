@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddExerciseComponent } from './add-exercise/add-exercise.component';
 import { ScrollingListComponent } from './scrolling-list/scrolling-list.component';
 import { SiderLayoutComponent } from './sider-layout/sider-layout.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 registerLocaleData(en);
 
@@ -24,7 +25,8 @@ registerLocaleData(en);
     DashboardComponent,
     AddExerciseComponent,
     ScrollingListComponent,
-    SiderLayoutComponent
+    SiderLayoutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

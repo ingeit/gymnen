@@ -1,45 +1,20 @@
-
-<div>
-  <button nz-button [nzType]="'primary'" (click)="toggleCollapsed()" style="margin-bottom: 10px;">
-    <i class="anticon" [class.anticon-menu-unfold]="isCollapsed" [class.anticon-menu-fold]="!isCollapsed">
-    </i>
-  </button>
-  <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
-    <li nz-menu-item>
-      <a routerLink="/addExercise">
-        <span title>
-            <i class="anticon anticon-plus"></i>
-            <span>Add Exercise</span>
-        </span>
-      </a>
-    </li>
-    <li nz-submenu>
-      <span title>
-        <i class="anticon anticon-appstore"></i>
-        <span>Navigation Two</span>
-      </span>
-      <ul>
-        <li nz-menu-item>Option 5</li>
-        <li nz-menu-item>Option 6</li>
-        <li nz-submenu>
-          <span title>Submenu</span>
-          <ul>
-            <li nz-menu-item>Option 7</li>
-            <li nz-menu-item>Option 8</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li nz-submenu>
-      <span title>
-        <i class="anticon anticon-setting"></i>
-        <span>Navigation Three</span>
-      </span>
-      <ul>
-        <li nz-menu-item>Option 9</li>
-        <li nz-menu-item>Option 10</li>
-        <li nz-menu-item>Option 11</li>
-      </ul>
-    </li>
-  </ul>
+<div class="logo">
 </div>
+<ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+  <li nz-menu-item>
+    <a routerLink="/dashboard">
+      <span>
+        <i class="anticon anticon-home"></i>
+        <span class="nav-text">Inicio</span>
+      </span>
+    </a>
+  </li>
+  <li nz-menu-item>
+    <a routerLink="/addExercise">
+      <span>
+        <i class="anticon anticon-plus"></i>
+        <span class="nav-text">Crear ejercicio</span>
+      </span>
+    </a>
+  </li>
+</ul>

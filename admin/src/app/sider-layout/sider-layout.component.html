@@ -1,5 +1,6 @@
 <nz-layout style="height: 100%;">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <!-- <side-menu></side-menu> -->
     <div class="logo">
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
@@ -23,8 +24,9 @@
   </nz-sider>
   <nz-layout>
     <nz-header style="background: #fff; padding:0;">
+      <!-- <navbar></navbar> -->
       <i id="menuicon" class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
-        (click)="isCollapsed=!isCollapsed"></i>
+        (click)="colapseExpand()"></i>
       <ul id="navlist" nz-menu [nzMode]="'horizontal'" style="line-height: 64px;">
         <li nz-menu-item>nav 1</li>
         <li nz-menu-item>nav 2</li>
