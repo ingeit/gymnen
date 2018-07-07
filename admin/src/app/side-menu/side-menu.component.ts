@@ -7,13 +7,14 @@ import { Component, TemplateRef, ViewChild, Input } from '@angular/core';
 })
 export class SideMenuComponent {
 
-  constructor() { }
-
-  isCollapsed = false;
-  triggerTemplate = null;
+  @Input() isCollapsed = false;
   @ViewChild('trigger') customTrigger: TemplateRef<void>;
+  triggerTemplate = null;
 
-  @Input() 
+  constructor() {
+    console.log(this.isCollapsed);
+  }
+
   /** custom trigger can be TemplateRef **/
   changeTrigger(): void {
     this.triggerTemplate = this.customTrigger;

@@ -1,30 +1,28 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  isCollapsed = false;
-  // triggerTemplate = null;
+  @Input() isCollapsed = false;
+  triggerTemplate = null;
   @ViewChild('trigger') customTrigger: TemplateRef<void>;
+  @Output() isCollapsedEmitter: EventEmitter<boolean> = new EventEmitter();
 
   /** custom trigger can be TemplateRef **/
-  // changeTrigger(): void {
-  //   this.triggerTemplate = this.customTrigger;
-  // }
-  
+  changeTrigger(): void {
+    this.triggerTemplate = this.customTrigger;
+  }
 
-  colapseExpand() {
+  collapseExpand() {
     this.isCollapsed=!this.isCollapsed;
-    // this.menuIconState.emit(this.isCollapsed);
+    this.isCollapsedEmitter.emit(this.isCollapsed);
+    // console.log("Is collapsed: ",this.isCollapsed);
   }
 
 }

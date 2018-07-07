@@ -1,5 +1,4 @@
-import { Component, TemplateRef, ViewChild, Input } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, TemplateRef, ViewChild, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'sider-layout',
@@ -8,22 +7,20 @@ import { EventEmitter } from 'events';
 })
 
 export class SiderLayoutComponent {
-  
+
   isCollapsed = false;
   triggerTemplate = null;
   @ViewChild('trigger') customTrigger: TemplateRef<void>;
 
-  @Input() menuIconState;
-  
-  constructor(){}
+  constructor() { }
+
+  receiveIsCollapsed($event){
+    this.isCollapsed = $event;
+  }
 
   /** custom trigger can be TemplateRef **/
   changeTrigger(): void {
     this.triggerTemplate = this.customTrigger;
-  }
-  
-  colapseExpand(): void {
-    this.isCollapsed=!this.isCollapsed;
   }
 
 }

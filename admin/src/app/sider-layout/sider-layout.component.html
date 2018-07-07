@@ -1,37 +1,10 @@
 <nz-layout style="height: 100%;">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
-    <!-- <side-menu></side-menu> -->
-    <div class="logo">
-    </div>
-    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-      <li nz-menu-item>
-        <a routerLink="/dashboard">
-          <span>
-            <i class="anticon anticon-home"></i>
-            <span class="nav-text">Inicio</span>
-          </span>
-        </a>
-      </li>
-      <li nz-menu-item>
-        <a routerLink="/addExercise">
-          <span>
-            <i class="anticon anticon-plus"></i>
-            <span class="nav-text">Crear ejercicio</span>
-          </span>
-        </a>
-      </li>
-    </ul>
+    <side-menu [isCollapsed]="isCollapsed"></side-menu>
   </nz-sider>
   <nz-layout>
     <nz-header style="background: #fff; padding:0;">
-      <!-- <navbar></navbar> -->
-      <i id="menuicon" class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
-        (click)="colapseExpand()"></i>
-      <ul id="navlist" nz-menu [nzMode]="'horizontal'" style="line-height: 64px;">
-        <li nz-menu-item>nav 1</li>
-        <li nz-menu-item>nav 2</li>
-        <li nz-menu-item>nav 3</li>
-      </ul>
+      <navbar [isCollapsed]="isCollapsed" (isCollapsedEmitter)="receiveIsCollapsed($event)"></navbar>
     </nz-header>
     <nz-content style="margin:0 16px;">
       <nz-breadcrumb style="margin:16px 0;">
