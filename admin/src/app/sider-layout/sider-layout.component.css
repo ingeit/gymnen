@@ -35,9 +35,9 @@
   height: 100% !important;
 }
 
-nz-content {
+/* nz-content {
   height: 100% !important;
-}
+} */
 
 router-outlet {
   height: 100% !important;

@@ -1,12 +1,41 @@
-#menuicon{
+/* #menuicon{
     display: inline-block !important;
     *display: inline !important;
     overflow: hidden;
+} */
+
+i {
+    float: left;
+    /* display: inline-block !important; */
+    /* *display: inline !important; */
+    overflow: hidden;
 }
 
-#navlist{
+/* #navlist{
   display: inline-block !important;
   *display: inline !important;
   overflow: hidden;
-}
+} */
+
+ul {
+  /* float: left; */
+  /* display: inline-block !important; */
+  /* *display: inline !important; */
+  /* list-style-type: none; */
+  /* white-space: nowrap; */
+  /* overflow-x: auto; */
   
+  overflow: hidden;
+  /* overflow-y: hidden; */
+  
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  
+  -webkit-overflow-scrolling: touch;
+}
+
+li {
+  /* flex: 0 0 auto; */
+  display:inline;
+}
