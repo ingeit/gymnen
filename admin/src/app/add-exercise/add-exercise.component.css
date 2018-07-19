@@ -4,9 +4,10 @@
 
 nz-form-item {
   margin: 0px;
+  padding: 0px; 
 }
 
 button {
   margin: 5px;
-  margin-top: 15px
+  margin-top: 15px;
 }

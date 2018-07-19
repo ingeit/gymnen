@@ -8,27 +8,29 @@
     <div nz-row>
       <div nz-col>
         <nz-card>
-          <form nz-form>
+          <form nz-form [formGroup]="formulario" (ngSubmit)="submitFormulario">
             <nz-form-item>
               <nz-form-label [nzSpan]="isHorizontal? 4:null">Nombre</nz-form-label>
               <nz-form-control [nzSpan]="isHorizontal? 14:null">
-                <input nz-input placeholder="Nombre">
+                <input nz-input placeholder="Nombre" formControlName="nombreForm">
+                <nz-form-explain *ngIf="formulario.get('nombreForm').dirty && formulario.get('nombreForm').errors">Ingrese un nombre !</nz-form-explain>
               </nz-form-control>
             </nz-form-item>
             <nz-form-item>
               <nz-form-label [nzSpan]="isHorizontal? 4:null">Descripcion</nz-form-label>
               <nz-form-control [nzSpan]="isHorizontal? 14:null">
-                <input nz-input placeholder="Descripcion">
+                <input nz-input placeholder="Descripcion" formControlName="descripcionForm">
+                <nz-form-explain *ngIf="formulario.get('descripcionForm').dirty && formulario.get('descripcionForm').errors">Ingrese una descripcion !</nz-form-explain>
               </nz-form-control>
             </nz-form-item>
+            <button nz-button nzType="primary" (click)="ricky()">
+              Guardar
+            </button>
+            <input type="file" #fileLoader style="display: none;" (change)="subirImagen($event)">
+            <button nz-button nzType="dashed" (click)="addImage()" >
+              Agregar imagen<i class="anticon anticon-plus-circle-o"></i>
+            </button>
           </form>
-          <button nz-button nzType="primary" (click)="ricky()">
-            Guardar
-          </button>
-          <input type="file" #fileLoader style="display: none;" (change)="subirImagen($event)">
-          <button nz-button nzType="dashed" (click)="addImage()" >
-            Agregar imagen<i class="anticon anticon-plus-circle-o"></i>
-          </button>
         </nz-card>
       </div>
     </div>

@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'add-exercise',
@@ -9,13 +9,25 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class AddExerciseComponent implements OnInit {
 
   image: any = null;
+  formulario: FormGroup;
   @ViewChild("fileLoader") imgld: any;
 
-  constructor() {
+  constructor(private fBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {
+    this.formulario = this.fBuilder.group({
+      nombreForm: [ null, [ Validators.required ] ],
+      descripcionForm: [ null, [ Validators.required ] ],
+      remember: [ true ]
+    });
+  }
 
+  submitFormulario(): void {
+    for (const i in this.formulario.controls) {
+      this.formulario.controls[i].markAsDirty();
+      this.formulario.controls[i].updateValueAndValidity();
+    }
   }
 
   addImage() {

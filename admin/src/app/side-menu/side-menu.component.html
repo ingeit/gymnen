@@ -1,8 +1,9 @@
 <div class="logo">
+  NEN
 </div>
 <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-  <li nz-menu-item>
-    <a routerLink="/dashboard">
+  <li nz-menu-item [routerLinkActive]="['ant-menu-item-selected']">
+      <a routerLink="/dashboard" >
       <span>
         <i class="anticon anticon-home"></i>
         <span class="nav-text">Inicio</span>
